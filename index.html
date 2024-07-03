@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+	 <link rel="stylesheet" href="./base.css">
+    <title>Pay</title>
+  </head>
+
+  <body>
+    <main class="main">
+      <div class="container shadow">
+        <div class="main__content">
+			<h1 class="main__title gradient">Оплата</h1>
+			<form>
+				<div class="content__item">
+					<p>ФИО:</p>
+					<input type="text" required pattern="^[а-яА-ЯёЁ\s]+$" class="input" id="fullname" placeholder="ФИО" />
+				</div>
+				
+				<div class="content__item">
+					<p>Виды оплат:</p>
+					<input type="text" required pattern="^[а-яА-ЯёЁ\s]+$" class="input" id="selectPay" placeholder="Оплата" />
+					<div class="select ">
+				
+					</div>
+				</div>
+				
+				<div class="content__item">
+					<p>Сумма оплаты:</p>
+					<input type="text" pattern="^[1-9]\d*$" class="input" id="cost" placeholder="0,00₽" />
+				</div>
+			</form>
+          
+			<div class="content__item">
+				<button class="button" id="createQr">QR-code</button>
+			</div>
+        </div>
+      </div>
+
+		<section class="modal">
+			<div class="modal-inner">
+				<div class="container">
+					<button name="close" class="button-close" id="close"></button>
+					<p>Отсканировать QR-Code</p>
+					<img src="" alt="" class="img-qr">
+				</div>
+			</div>
+		</section>
+    </main>
+
+	 
+	 <script src="./scpirt.js"></script>
+  </body>
+</html>
