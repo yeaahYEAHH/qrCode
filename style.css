@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	width: 100%;
+	height: 100%;
+}
+
 :root {
   --ligthBackgroundColor: #f8f8f8;
   --ligthContainerColor: #ffffff;
@@ -84,20 +110,20 @@ input:hover {
 	width: 50%;
 }
 
-#selectPay{
+#type{
 	border-radius: 10px 10px 0px 0px;
 }
 
 .select {
+	display: none;
+	right: 0;
 	border-radius: 0px 0px 10px 10px;
-	top: 0;
-	right: -1000px;
 	max-height: 350px;
 	position: absolute;
 	padding: 10px;
 	background-color: var(--ligthItemColor);
 	z-index: 3;
-	transition: 1.5s all;
+	transition: 1s;
 	overflow-y: scroll;
 	scrollbar-width: none;
 	-webkit-box-shadow: -1px 10px 9px 0px rgba(3, 96, 183, 0.28);
@@ -107,7 +133,7 @@ input:hover {
 }
 
 .select.active{
-	right: 0;
+	display: block;
 }
 
 .select > p{
@@ -156,7 +182,7 @@ input:hover {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, .5);
-	cursor: pointer;
+
 }
 
 .modal.active{
@@ -172,20 +198,6 @@ input:hover {
 	padding: 5px;
 }
 
-.button-close{
-	position: absolute;
-	top: 0;
-	right: 0;
-	border-radius: 50%;
-	border: none;
-	color: #f3f4f6;
-	outline: none;
-	background-color: red;
-	display: block;
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-}
 
 .modal-inner > .container{
 	max-width: 100%;
@@ -195,7 +207,7 @@ input:hover {
 	row-gap: 30px;
 }
 
-.img-qr{
+.img__qr{
 	width: 70%;
 	height: 80%;
 	max-width: 350px;
